@@ -22,7 +22,7 @@ This repository is set up for a project site at:
 
 `https://will-bell.github.io/banjo-field-notes/`
 
-Once GitHub Pages is enabled for the `main` branch, the site should publish from the repository root.
+GitHub Pages is deployed from GitHub Actions on pushes to `main`.
 
 ## Philosophy
 
