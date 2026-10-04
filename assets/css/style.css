@@ -98,3 +98,37 @@ audio, video {
   padding: 0.8rem 1rem;
   background: rgba(255,255,255,0.28);
 }
+
+
+/* Interactive chord visualizer */
+.chord-visualizer { margin: 1.25rem 0 2rem; }
+.chord-controls { display: flex; flex-wrap: wrap; gap: 0.8rem 1rem; align-items: end; margin-bottom: 0.8rem; }
+.chord-control { display: grid; gap: 0.25rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.82rem; color: var(--muted); }
+.chord-control select { min-width: 11rem; padding: 0.45rem 0.55rem; border: 1px solid var(--rule); background: #fffaf0; color: var(--ink); font: inherit; font-size: 1rem; }
+.chord-live-summary { color: var(--muted); margin: 0.5rem 0 1rem; }
+.chord-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; }
+.chord-grid.single { grid-template-columns: minmax(190px, 310px); }
+.chord-card { border: 1px solid var(--rule); background: rgba(255,255,255,0.28); padding: 0.75rem; min-width: 0; }
+.chord-card-heading { display: flex; justify-content: space-between; gap: 0.75rem; align-items: baseline; margin-bottom: 0.25rem; }
+.chord-card-heading strong { font-size: 1.15rem; }
+.chord-card-heading span { color: var(--muted); font-size: 0.85rem; text-align: right; }
+.chord-svg { display: block; width: 100%; max-width: 230px; height: auto; margin: 0 auto; }
+.string-line { stroke: #4b443a; stroke-width: 1.4; }
+.fret-line { stroke: #a99d8a; stroke-width: 1; }
+.nut-line { stroke: #201d18; stroke-width: 4; }
+.note-dot { fill: #eee4cf; stroke: #201d18; stroke-width: 1.5; }
+.note-dot.root-note { fill: #201d18; }
+.note-dot.open-note { stroke-width: 1.4; }
+.note-label { fill: #201d18; font: 600 11px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; pointer-events: none; }
+.note-label.root-label { fill: #f7f2e3; }
+.string-label, .fret-number { fill: #6c6254; font: 10px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.chord-card-meta { display: flex; justify-content: space-between; gap: 0.6rem; align-items: baseline; color: var(--muted); font-size: 0.8rem; }
+.chord-card-meta span { text-align: right; }
+.chord-legend { display: flex; gap: 1rem; flex-wrap: wrap; color: var(--muted); font-size: 0.88rem; }
+.chord-legend .sample-dot { display: inline-block; width: 0.85rem; height: 0.85rem; border: 1px solid var(--ink); border-radius: 50%; vertical-align: -0.1rem; margin-right: 0.25rem; background: #eee4cf; }
+.chord-legend .sample-dot.root { background: var(--ink); }
+
+@media (max-width: 520px) {
+  .chord-control, .chord-control select { width: 100%; }
+  .chord-grid { grid-template-columns: 1fr; }
+}
