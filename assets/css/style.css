@@ -132,3 +132,5 @@ audio, video {
   .chord-control, .chord-control select { width: 100%; }
   .chord-grid { grid-template-columns: 1fr; }
 }
+
+.root-note + .note-label { fill: #f7f2e3; }
