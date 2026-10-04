@@ -1,0 +1,7 @@
+title: Banjo Field Notes
+description: A living notebook for learning banjo and music theory.
+url: "https://will-bell.github.io"
+baseurl: "/banjo-field-notes"
+markdown: kramdown
+permalink: pretty
+theme: null
